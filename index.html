@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <!-- created by John Lancaster - @jlank - john.k.lancaster@gmail.com | 2014 | MIT License -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>e-Entrepreneurship bit.ly campaign generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/icon.css">
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+        <h1>e-Entrepreneurship bit.ly team campagin short-link generator</h1>
+        <h3>what is this?</h3>
+        <p>
+          This page offers a simple form that automates bitly short link creation with your own bitly account.
+          With this, you can create campaign names, and optionally specify team member names/initials.  With this information
+          the form will construct unique campaign URLs in the form "campaign_initials" and then return you the bitly short links.
+          You can then log into bitly and view the statistics to easily track which links got the most traction on your team.
+          This will help you target and optimize your efforts.  This form can be run locally or on a webserver.
+        </p>
+        <br/>
+        <br/>
+        <div class="listen_keys">
+          <input type="text" id="base_url" class="input-xxlarge base_url" placeholder="base url to track"><span class="help-inline"></b>Enter your landing page link here, i.e.</b> <a target="_blank" href="http://unbouncepages.com/coursefood">http://unbouncepages.com/coursefood</a></span>
+        </div>
+        <div class="row-fluid">
+          <div class="span4">
+                <h4>campaign</h4>
+                <div id="campaign" class="listen_keys">
+                  <input type="text" placeholder="facebook">
+                  <br/>
+                  <input type="text" placeholder="twitter">
+                  <br/>
+                  <input type="text" placeholder="email">
+                  <br/>
+                  <input type="text" placeholder="other">
+                  <br/>
+                </div>
+                <button class="campaign the-icons btn"><i class="icon-plus-sign"></i> add more campaigns</button>
+          </div>
+
+          <div class="span8">
+                <h4>initials (optional)</h4>
+                <div id="initials" class="listen_keys">
+                  <input type="text" placeholder="name_1">
+                  <br/>
+                  <input type="text" placeholder="name_2">
+                  <br/>
+                  <input type="text" placeholder="name_3">
+                  <br/>
+                  <input type="text" placeholder="name_4">
+                  <br/>
+                </div>
+                <button class="initials the-icons btn"><i class="icon-plus-sign"></i> add more names</button>
+          </div>
+        </div>
+        <br/>
+        <br/>
+
+        <p><b><a target="_blank" href="https://bitly.com/a/your_api_key">click here</a> to get your API key from bitly.com</b></p>
+        <form class="form-inline">
+          <input type="text" id="bitly_username" class="input-medium" placeholder="bitly username">
+          <input type="password" id="bitly_key" class="input-medium" placeholder="bitly API key">
+          <button type="submit" id="get_links" class="btn">Get Short Links</button>
+        </form>
+
+        <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Campaign Name</th>
+                  <th>Team Member Name</th>
+                  <th>Long Url</th>
+                  <th>Short Url</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/campaign_app.js"></script>
+
+    </body>
+</html>
