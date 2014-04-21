@@ -1,3 +1,5 @@
 # Bitly Campaign Generator
 
-## How do I use this?  Just download the code and open index.html
+## How do I use this?
+
+Just download the code and open index.html
